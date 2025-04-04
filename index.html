@@ -1,97 +1,78 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Gourmet</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="media/Restaurant Logo.png" alt="Restaurant Gourmet Logo">
-            </div>
-            <ul>
-                <li><a href="#hero">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="#reservation">Réservation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div id="hero">
-            <h1>Bienvenue au Restaurant Gourmet</h1>
-            <p>Découvrez une expérience culinaire inoubliable avec nos plats soigneusement préparés par des chefs de
-                renom.</p>
-            <a href="#reservation" class="btn">Réserver maintenant</a>
-        </div>
-    </header>
-    <main>
-        <section id="about">
-            <h2>À propos de nous</h2>
-            <img src="media/Restaurtant.png" alt="Restaurant Ambiance">
-            <p>Notre restaurant offre une ambiance chaleureuse et conviviale, parfaite pour toutes les occasions. Nous
-                utilisons des ingrédients frais et locaux pour préparer chaque plat.</p>
-        </section>
-        <section id="reservation">
-            <h2>Réservation</h2>
-            <form>
-                <label for="title">Titre:</label>
-                <select id="title" name="title">
-                    <option value="mr">Monsieur</option>
-                    <option value="mrs">Madame</option>
-                </select>
-                <label for="name">Nom et prénom:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="phone">Numéro de téléphone:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="guests">Nombre de convives:</label>
-                <input type="number" id="guests" name="guests" required>
-                <label for="menu">Sélection de menu:</label>
-                <select id="menu" name="menu">
-                    <option>Gourmet</option>
-                    <option>Saveur</option>
-                    <option>Végétarien</option>
-                    <option>Enfant</option>
-                    <option>Prestige</option>
-                    <option>Tradition</option>
-                </select>
-                <label for="remarks">Remarques:</label>
-                <textarea id="remarks" name="remarks"></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <p>Pour toute question ou réservation, n'hésitez pas à nous contacter.</p>
-            <form>
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+  <main class="container">
+    <section class="card">
+      <h2>Card 1</h2>
+      <p>This is some sample text for card 1.</p>
+    </section>
+    <section class="card">
+      <h2>Card 2</h2>
+      <p>This is some sample text for card 2.</p>
+    </section>
+    <section class="card">
+      <h2>Card 3</h2>
+      <p>This is some sample text for card 3.</p>
+    </section>
+  </main>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Envoyer</button>
-            </form>
-            <p>Email: contact@restaurantgourmet.com</p>
-            <p>Téléphone: +33 1 23 45 67 89</p>
-        </section>
-
-    </main>
-    <footer>
-        <p>© 2025 Restaurant Gourmet</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-    </footer>
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
 </body>
+</html>
 
+
+<!-- menu.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Menu Page</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Item A</h2>
+      <p>Description of item A.</p>
+    </section>
+    <section class="card">
+      <h2>Item B</h2>
+      <p>Description of item B.</p>
+    </section>
+    <section class="card">
+      <h2>Item C</h2>
+      <p>Description of item C.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+</body>
 </html>
