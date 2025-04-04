@@ -1,74 +1,395 @@
-/* style.css */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+/* Global Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #f5f5f5;
+    background-color: #1a1a1a;
+    scroll-behavior: smooth;
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+    background: url('../media/Restaurtant.png') no-repeat center center/cover;
+    text-align: center;
+    padding: 8rem 1rem;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 3px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+nav .logo img {
+    height: 140px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  gap: 20px;
+nav a:hover {
+    color: #d4af37;
 }
 
-.card {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  flex: 1 1 300px;
-  max-width: 100%;
-  box-sizing: border-box;
+/* Section Spacing */
+section {
+    margin-bottom: 4rem;
+    padding: 4rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
-  margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .container {
+/* Hero Section */
+#hero {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  h1, h2, p {
     text-align: center;
-  }
+    min-height: 70vh;
+    background: url('../media/hero-background.jpg') no-repeat center center/cover;
+}
 
-  body, html {
-    padding: 10px;
-  }
+#hero h1 {
+    margin: 0;
+    font-size: 4rem;
+    color: #d4af37;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#hero p {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    color: #f5f5f5;
+    max-width: 600px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background: #d4af37;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #d4af37;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+#about img {
+    max-width: 85%;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 1);
+}
+
+#about h2 {
+    position: relative;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Menu Page */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    padding: 4rem;
+    background-color: #1a1a1a;
+}
+
+.menu-item {
+    background: #2a2a2a;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    color: #f5f5f5;
+    width: 350px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 1);
+    background: #3a3a3a;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);
+}
+
+.menu-item h2 {
+    font-size: 1.8rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.menu-item p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.menu-item p:last-child {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #f5f5f5;
+}
+
+/* Reservation Section */
+#reservation {
+    text-align: center;
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+    position: relative;
+    padding: 4rem 2rem;
+}
+
+#reservation h2 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+}
+
+#reservation form {
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #1a1a1a;
+    border-radius: 20px;
+    width: 70%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+#reservation form:hover {
+    transform: scale(1.02);
+}
+
+#reservation form label {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+#reservation form input,
+#reservation form select,
+#reservation form textarea,
+#reservation form button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+#reservation form input,
+#reservation form select,
+#reservation form textarea {
+    background: #444;
+    color: #f5f5f5;
+}
+
+#reservation form button {
+    background: #d4af37;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#reservation form button:hover {
+    background: #fff;
+    color: #d4af37;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.7);
+    padding: 4rem;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+}
+
+#contact form {
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: #1a1a1a;
+    border-radius: 20px;
+    width: 70%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease;
+}
+
+#contact form:hover {
+    transform: scale(1.02);
+}
+
+#contact form label {
+    display: block;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+#contact form input,
+#contact form textarea {
+    background: #444;
+    color: #f5f5f5;
+}
+
+#contact form button {
+    background: #d4af37;
+    color: #1a1a1a;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contact form button:hover {
+    background: #fff;
+    color: #d4af37;
+}
+
+#contact p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: #111;
+    color: #f5f5f5;
+    border-top: 3px solid #d4af37;
+}
+
+footer .social-links a {
+    color: #d4af37;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+footer .social-links a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .menu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact form,
+    #reservation form {
+        width: 90%;
+    }
 }
