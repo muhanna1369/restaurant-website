@@ -14,32 +14,39 @@ header {
 }
 
 .container {
+  width: 90%;
   max-width: 1200px;
   margin: auto;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 20px;
 }
 
 .card {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  flex: 1 1 300px;
-  max-width: 100%;
+  width: 30%;
+  min-width: 280px;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 .card-content {
@@ -47,13 +54,13 @@ header {
 }
 
 .card-title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: 10px;
 }
 
 .card-text {
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 footer {
@@ -61,23 +68,20 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-/* Responsive Styles */
+/* ✨ Mobile / Tablet Fixes */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
 
   .card {
     width: 100%;
     margin-bottom: 20px;
-  }
-
-  body, html {
-    padding: 10px;
   }
 
   h1, h2, p {
